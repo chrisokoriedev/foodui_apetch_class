@@ -41,9 +41,8 @@ class WelcomeScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         '${kImageUrl}welcome.png',
-                        height: 300,
+                        height: MediaQuery.of(context).size.height*0.4,
                         fit: BoxFit.fitHeight,
-
                       ),
                     ],
                   ),
@@ -73,12 +72,13 @@ class WelcomeScreen extends StatelessWidget {
                         sizedHeight(20),
                         ElevatedButton(
                           style: ButtonStyle(
-                              fixedSize:
-                                  MaterialStateProperty.all(const Size(170, 60)),
+                              fixedSize: MaterialStateProperty.all(
+                                  const Size(170, 60)),
                               backgroundColor:
                                   MaterialStateProperty.all(kButtonColor),
-                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                                  borderRadius: kBorderRadius))),
+                              shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                      borderRadius: kBorderRadius))),
                           onPressed: () {},
                           child: Text('Get Started'),
                         ),
