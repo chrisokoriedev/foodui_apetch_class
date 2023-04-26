@@ -59,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                               letterSpacing: 2.0,
                               color: kWhiteColor),
                         ),
-                        sizedHeight(10),
+                        sizedHeight(11),
                         const Text(
                           'Let us help you discover the \nbest food of the week.',
                           style: TextStyle(
