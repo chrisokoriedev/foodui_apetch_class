@@ -32,7 +32,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: kPrimaryColor,
         body: SingleChildScrollView(
           child: Builder(
             builder: (context) => LiquidSwipe(
