@@ -5,12 +5,14 @@ import 'package:get/get.dart';
 
 const kPrimaryColor = Color(0xff918ae2);
 const kWhiteColor = Colors.white;
+const yellowColor =  Color(0xffffd37f);
 const kButtonColor = Color(0xff5d55b4);
 final kBorderRadius = BorderRadius.circular(10).w;
 const kImageUrl = 'assets/';
 final kPadding = EdgeInsets.symmetric(horizontal: 20.w, vertical: 40.h);
+TextStyle headingStyle() => TextStyle(fontSize: 40.sp, fontWeight: FontWeight.w600);
 
-SizedBox sizedHeight(double height) => SizedBox(height: height);
+SizedBox sizedHeight(double height) => SizedBox(height: height.h);
 
 class NewWidget extends StatelessWidget {
   final String title;

@@ -21,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     ),
     const NewWidget(
       title: 'Flexible\ndelivery',
-      bgColor: Color(0xffffd37f),
+      bgColor: yellowColor,
       imgUrl: 'donut.png',
       textColor: Colors.black,
     ),
