@@ -20,7 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       textColor: Colors.white,
     ),
     const NewWidget(
-      title: 'Delicious\nfoods',
+      title: 'Flexible\ndelivery',
       bgColor: Color(0xffffd37f),
       imgUrl: 'donut.png',
       textColor: Colors.black,
