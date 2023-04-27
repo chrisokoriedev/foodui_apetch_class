@@ -7,5 +7,5 @@ const kWhiteColor=Colors.white;
 const kButtonColor=Color(0xff5d55b4);
 final kBorderRadius=BorderRadius.circular(10).w;
 const kImageUrl='assets/';
-const kPadding=EdgeInsets.symmetric(horizontal: 20,vertical: 30);
+final kPadding=EdgeInsets.symmetric(horizontal: 20.w,vertical: 30.h);
 SizedBox sizedHeight( double height) => SizedBox(height: height);
