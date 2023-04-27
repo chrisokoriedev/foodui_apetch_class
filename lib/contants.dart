@@ -37,9 +37,10 @@ class NewWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Image.asset(
-                '${kImageUrl}' '${imgUrl}',
-                height: 400.h,
-                fit: BoxFit.fitHeight,
+                '$kImageUrl' '$imgUrl',
+                width: 350.r,
+                height: 400.r,
+                fit: BoxFit.contain,
               ),
             ],
           ),
