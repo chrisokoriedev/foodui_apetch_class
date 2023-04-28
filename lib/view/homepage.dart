@@ -43,6 +43,60 @@ class HomePage extends StatelessWidget {
                     width: 50.w,
                   )
                 ],
+              ),
+              sizedHeight(40),
+              Container(
+                width: double.infinity,
+                height: 260.h,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30).w,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xffece1ff),
+                        offset: Offset(0,8),
+                        blurRadius: 5.0,
+                        spreadRadius: 3
+                      )
+                    ],
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      stops: const [0.2, 0.9],
+                      colors: [
+                        kPrimaryColor.withOpacity(0.9),
+                        const Color(0xffd6c4f4),
+                      ],
+                    )),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Discover',
+                            style: TextStyle(
+                                fontSize: 20.sp,
+                                height: 2.0.sp,
+                                color: const Color(0xffe1d3ef)),
+                          ),
+                          Text(
+                            'Best lunch\nof the day',
+                            style: TextStyle(
+                                fontSize: 30.sp,
+                                color: const Color(0xfffffefd),
+                                fontWeight: FontWeight.w500),
+                          ),
+                          sizedHeight(20),
+                          const Icon(Icons.arrow_right_alt,color: Colors.white,)
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               )
             ],
           ),
