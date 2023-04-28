@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final PageController controller = PageController();
+  final ScrollController controller = ScrollController();
   double _currentItemIndex = 0;
 
   @override
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                         GestureDetector(
                             onTap: () {
                               if (_currentItemIndex <
-                                  getFoodDetails.length-1) {
+                                  getFoodDetails.length - 1) {
                                 _currentItemIndex++;
                                 controller.animateTo(_currentItemIndex,
                                     duration: const Duration(milliseconds: 500),
@@ -151,17 +151,11 @@ class _HomePageState extends State<HomePage> {
                 sizedHeight(20),
                 SizedBox(
                   height: 260.h,
-                  child: PageView.builder(
+                  child: ListView.builder(
                       controller: controller,
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       itemCount: getFoodDetails.length,
-                      onPageChanged: (index) {
-                        setState(() {
-                          _currentItemIndex = index as double;
-                        });
-                      },
-
                       itemBuilder: (context, index) {
                         final data = getFoodDetails[index];
                         return Container(
