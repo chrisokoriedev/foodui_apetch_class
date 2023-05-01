@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final ScrollController controller = ScrollController();
+  final PageController controller = PageController(initialPage: 0);
   double _currentItemIndex = 0;
 
   @override
@@ -110,7 +110,10 @@ class _HomePageState extends State<HomePage> {
                             )
                           ],
                         ),
-                        Image.asset('${kImageUrl}sushi.png')
+                        Image.asset(
+                          '${kImageUrl}sushi.png',
+                          width: 200.w,
+                        )
                       ],
                     ),
                   ),
@@ -119,39 +122,41 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Most Popular'),
+                    const Text('Most Popular'),
                     Row(
                       children: [
                         InkWell(
-                            onTap: () {
-                              if (_currentItemIndex > 0) {
-                                _currentItemIndex--;
-                                controller.animateTo(_currentItemIndex,
-                                    duration: const Duration(milliseconds: 500),
-                                    curve: Curves.easeInOut);
-                              }
-                            },
-                            child: Icon(Icons.arrow_back_ios, size: 14)),
+                          onTap: () {
+                            if (_currentItemIndex > 0) {
+                              _currentItemIndex--;
+                              controller.previousPage(
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.easeInOut);
+                            }
+                          },
+                          child: Icon(Icons.arrow_back_ios, size: 14.sp),
+                        ),
                         SizedBox(width: 10.w),
-                        GestureDetector(
-                            onTap: () {
-                              if (_currentItemIndex <
-                                  getFoodDetails.length - 1) {
-                                _currentItemIndex++;
-                                controller.animateTo(_currentItemIndex,
-                                    duration: const Duration(milliseconds: 500),
-                                    curve: Curves.easeInOut);
-                              }
-                            },
-                            child: Icon(Icons.arrow_forward_ios, size: 14)),
+                        InkWell(
+                          onTap: () {
+                            if (_currentItemIndex < getFoodDetails.length - 1) {
+                              _currentItemIndex++;
+                              controller.nextPage(
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.easeInOut);
+                            }
+                          },
+                          child: Icon(Icons.arrow_forward_ios, size: 14.sp),
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
                 sizedHeight(20),
                 SizedBox(
-                  height: 260.h,
-                  child: ListView.builder(
+                  height: 280.h,
+                  child: PageView.builder(
+
                       controller: controller,
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
@@ -166,13 +171,17 @@ class _HomePageState extends State<HomePage> {
                               color: data.foodColor,
                               borderRadius: BorderRadius.circular(20).w),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Image.asset(
                                 data.foodImageUrl,
                                 width: 150.w,
+                                height: 200.h,
+                                alignment: Alignment.center,
                               ),
                               sizedHeight(20),
-                              Text(data.foodName)
+                              Text(data.foodName),
                             ],
                           ),
                         );
