@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodui/view/homepage.dart';
+import 'package:foodui/view/offersection.dart';
 import 'package:get/get.dart';
 
 const kPrimaryColor = Color(0xff918ae2);
 const kWhiteColor = Colors.white;
+const kBlackColor = Colors.black;
+const kGreyColor = Color(0xfff5f5f5);
 const yellowColor = Color(0xffffd37f);
 const kButtonColor = Color(0xff5d55b4);
 final kBorderRadius = BorderRadius.circular(10).w;
@@ -80,7 +82,7 @@ class NewWidget extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(kButtonColor),
                       shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(borderRadius: kBorderRadius))),
-                  onPressed: () => Get.to(const HomePage()),
+                  onPressed: () => Get.to(const OfferPage()),
                   child: Text(
                     'Get Started',
                     style:

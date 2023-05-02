@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:foodui/view/mainScreen.dart';
 import 'package:foodui/view/welcome.dart';
 import 'package:get/get.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: const WelcomeScreen(),
+          home: const MainScreen(),
         );
       }
     );
