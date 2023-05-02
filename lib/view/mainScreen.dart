@@ -32,7 +32,7 @@ class MainScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                sizedHeight(20),
+                sizedHeight(60),
                 Row(
                   children: [
                     TabBar(

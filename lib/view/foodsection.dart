@@ -18,8 +18,8 @@ class FoodSection extends StatelessWidget {
                 fillColor: kGreyColor,
                 hintText: 'Search',
                 filled: true,
-                contentPadding: EdgeInsets.all(15),
-                prefixIcon: Icon(Icons.search),
+                contentPadding: const EdgeInsets.all(15),
+                prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20))),
           )

@@ -168,7 +168,7 @@ class _OfferPageState extends State<OfferPage> {
                               alignment: Alignment.center,
                             ),
                             sizedHeight(20),
-                            Text(data.foodName,style: TextStyle(fontWeight: FontWeight.w600,),),
+                            Text(data.foodName,style: const TextStyle(fontWeight: FontWeight.w600,),),
                           ],
                         ),
                       );
