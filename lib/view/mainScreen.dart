@@ -19,20 +19,22 @@ class MainScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 20.h,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
                           onTap: () {}, child: const Icon(Icons.menu)),
-                      Image.asset(
-                        '${kImageUrl}avatar.png',
-                        fit: BoxFit.cover,
+                      CircleAvatar(
+                        radius: 20,
+                        child: Image.asset(
+                          '${kImageUrl}avatar.png',
+                          fit: BoxFit.cover,
+                        ),
                       )
                     ],
                   ),
                 ),
-                sizedHeight(60),
+                sizedHeight(40),
                 Row(
                   children: [
                     TabBar(

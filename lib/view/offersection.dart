@@ -23,7 +23,7 @@ class _OfferPageState extends State<OfferPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              sizedHeight(50),
+              sizedHeight(30),
               Text(
                 'Top of',
                 style: headingStyle(),
@@ -143,7 +143,6 @@ class _OfferPageState extends State<OfferPage> {
               SizedBox(
                 height: 280.h,
                 child: PageView.builder(
-
                     controller: controller,
                     physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
@@ -168,12 +167,17 @@ class _OfferPageState extends State<OfferPage> {
                               alignment: Alignment.center,
                             ),
                             sizedHeight(20),
-                            Text(data.foodName,style: const TextStyle(fontWeight: FontWeight.w600,),),
+                            Text(
+                              data.foodName,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
                           ],
                         ),
                       );
                     }),
-              )
+              ),
             ],
           ),
         ),

@@ -22,7 +22,35 @@ class FoodSection extends StatelessWidget {
                 prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20))),
-          )
+          ),
+          sizedHeight(30),
+          DefaultTabController(
+              length: 3,
+              child: TabBar(
+                unselectedLabelColor: Colors.grey,
+                labelColor: kBlackColor,
+                indicatorSize: TabBarIndicatorSize.tab,
+                indicator: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50), // Creates border
+                    color: yellowColor),
+                tabs: [
+                  buildTab(Icons.local_pizza, 'All'),
+                  buildTab(Icons.fastfood, 'Fast Food'),
+                  buildTab(Icons.coffee, 'Drinks'),
+                ],
+              ))
+        ],
+      ),
+    );
+  }
+
+  Tab buildTab(IconData iconData, String title) {
+    return Tab(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Icon(iconData),
+          Text(title),
         ],
       ),
     );
